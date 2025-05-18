@@ -9,6 +9,14 @@ public class PlayerMovement : MonoBehaviour
     public float rightLimit = 3;
     public float speed = 5;
     public Rigidbody rb;
+    private float currentSpeed;
+
+
+    private void Start()
+    {
+        currentSpeed = speed;
+    }
+
 
     float horizontalInput;
     public float horizontalMultiplier = 2;
@@ -96,4 +104,14 @@ public class PlayerMovement : MonoBehaviour
     //    Time.timeScale = 1f; // Resumes game time
     //    restartBackground.SetActive(false);
     //}
+
+    public void SetSpeed(float speed)
+    {
+        currentSpeed = speed;
+    }
+
+    public void ResetSpeed()
+    {
+        currentSpeed = speed;
+    }
 }

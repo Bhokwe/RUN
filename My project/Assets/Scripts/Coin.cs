@@ -6,6 +6,7 @@ public class Coin : MonoBehaviour
 {
 
     public float rotateSpeed = 90f;
+
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.GetComponent<Obstacles>() != null)
@@ -28,11 +29,6 @@ public class Coin : MonoBehaviour
 
         
     }
-    void Start()
-    {
-        
-    }
-
     
     void Update()
     {
