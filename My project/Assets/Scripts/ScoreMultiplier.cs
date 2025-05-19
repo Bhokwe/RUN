@@ -1,4 +1,3 @@
-using System.Collections;
 using UnityEngine;
 
 public class ScoreMultiplier : MonoBehaviour
@@ -7,18 +6,12 @@ public class ScoreMultiplier : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log("ScoreMultiplier triggered by: " + other.name);
         if (other.CompareTag("Player"))
         {
-            PowerUpManager.instance.ActivatePowerUp(PowerUpType.ScoreMulitplier, 10f, 2f);
-            //StartCoroutine(ActivatePowerUp());
+            Debug.Log("Player detected! Activating ScoreMultiplier...");
+            PowerUpManager.instance.ActivatePowerUp(PowerUpType.ScoreMultiplier, duration, 2f);
             gameObject.SetActive(false);
         }
-    }
-
-    private IEnumerator ActivatePowerUp()
-    {
-        ScoreManager.instance.SetMultiplier(2);
-        yield return new WaitForSeconds(duration);
-
     }
 }

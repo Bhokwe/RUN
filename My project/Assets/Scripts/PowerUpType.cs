@@ -2,6 +2,7 @@ using UnityEngine;
 
 public enum PowerUpType
 {
-    ScoreMulitplier,
+
+    ScoreMultiplier,
     SpeedBoost
 }

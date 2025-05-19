@@ -685,11 +685,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e196af55663b4d94fb32f4db032e72a7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speed: 10
+  horizontalMultiplier: 1.5
   leftLimit: -3
   rightLimit: 3
-  speed: 10
   rb: {fileID: 1097114418}
-  horizontalMultiplier: 1.5
   alive: 1
 --- !u!54 &1097114418
 Rigidbody:
@@ -718,6 +718,59 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!1 &1158028492
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1158028494}
+  - component: {fileID: 1158028493}
+  m_Layer: 0
+  m_Name: TileManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1158028493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158028492}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38b8a03927d97f3419d76acc05dae454, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundPrefabs:
+  - {fileID: 2621763861760750274, guid: 78c66cb36cde94d4ab2b06bebd4b6d1d, type: 3}
+  - {fileID: 3916361137583824400, guid: a109f7b9f12133e4e9536f89a44550b8, type: 3}
+  - {fileID: 3870056826680538366, guid: 5cd4f6f89224d3c478583298831fb8e1, type: 3}
+  - {fileID: 4394975793482606412, guid: 2bb503bb5529ef64c817d3060565f56a, type: 3}
+  player: {fileID: 1097114416}
+  tileLength: 10
+  initialTiles: 15
+  despawnDistance: 30
+--- !u!4 &1158028494
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1158028492}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 8.914291, y: 11.597703, z: 31.054817}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1765620773
 GameObject:
   m_ObjectHideFlags: 0
@@ -793,7 +846,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38b8a03927d97f3419d76acc05dae454, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground: {fileID: 2621763861760750274, guid: 78c66cb36cde94d4ab2b06bebd4b6d1d, type: 3}
+  groundPrefabs:
+  - {fileID: 2621763861760750274, guid: 78c66cb36cde94d4ab2b06bebd4b6d1d, type: 3}
+  - {fileID: 3916361137583824400, guid: a109f7b9f12133e4e9536f89a44550b8, type: 3}
+  - {fileID: 3870056826680538366, guid: 5cd4f6f89224d3c478583298831fb8e1, type: 3}
+  - {fileID: 4394975793482606412, guid: 2bb503bb5529ef64c817d3060565f56a, type: 3}
+  player: {fileID: 1097114416}
+  tileLength: 10
+  initialTiles: 15
+  despawnDistance: 30
 --- !u!4 &1892988110
 Transform:
   m_ObjectHideFlags: 0
@@ -868,8 +929,8 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
-    m_FontSize: 25
-    m_FontStyle: 0
+    m_FontSize: 0
+    m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
@@ -899,3 +960,4 @@ SceneRoots:
   - {fileID: 1765620775}
   - {fileID: 20553418}
   - {fileID: 361707959}
+  - {fileID: 1158028494}

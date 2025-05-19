@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public void IncrementScore()
     {
         score++;
+
         if (scoreText != null)
         {
             scoreText.text = "SCORE: " + score;
@@ -28,14 +29,4 @@ public class GameManager : MonoBehaviour
         inst = this;
     }
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

@@ -21,7 +21,7 @@ public class PowerUpManager : MonoBehaviour
     {
         switch (type)
         {
-            case PowerUpType.ScoreMulitplier:
+            case PowerUpType.ScoreMultiplier:
                 if (scoreMultiplierCoroutine != null)
                     StopCoroutine(scoreMultiplierCoroutine);
                 scoreMultiplierCoroutine = StartCoroutine(ScoreMultiplierRoutine(duration, (int)value));

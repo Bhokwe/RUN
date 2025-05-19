@@ -31,6 +31,37 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2610904975973292121}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &2551812278150870951
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2558005750816023671}
+  m_Layer: 0
+  m_Name: PowerUpPoint
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2558005750816023671
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2551812278150870951}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5, z: 5}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2610904975973292121}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2621763861760750274
 GameObject:
   m_ObjectHideFlags: 0
@@ -67,6 +98,7 @@ Transform:
   - {fileID: 3849034034644008589}
   - {fileID: 2172073134751775476}
   - {fileID: 274999253764204058}
+  - {fileID: 2558005750816023671}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &7140932903431096661
@@ -102,8 +134,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2e438da8c23c8540952e81f42b57df1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  powerUpPoint: {fileID: 2558005750816023671}
   obstaclePrefab: {fileID: 92631653594226124, guid: 7854e85a5bb04dd42a459e1e2e1214ab, type: 3}
   coinPrefab: {fileID: 4415924513640591309, guid: df8063dca01e71744a794a9dc492b64b, type: 3}
+  spawnPowerUp: 0
+  powerUpType: 0
 --- !u!1 &2659272983672108620
 GameObject:
   m_ObjectHideFlags: 0
